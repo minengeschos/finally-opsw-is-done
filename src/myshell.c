@@ -64,6 +64,7 @@ int main(void) {
             while ((bytesRead = read(fd, buffer, sizeof(buffer))) > 0) {
                 write(STDOUT_FILENO, buffer, bytesRead);
             }
+            printf("\n");
 
             if (bytesRead == -1) {
                 perror("cat");
